@@ -15,7 +15,7 @@ describe('Add Todo', () => {
         cy.get('[data-at="removeTodoBtn"]').should('have.length', 2)
     })
 
-    it.skip('should be able to delete todo', () => {
+    it('should be able to delete todo', () => {
         const todoText = 'To be deleleted'
         cy.get('[data-at="new-todo"]').type(`${todoText}{enter}`)
         cy.get('[data-at="removeTodoBtn"]').click()
