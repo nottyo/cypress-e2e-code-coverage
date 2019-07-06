@@ -1,4 +1,4 @@
-# my-todo-app
+# cypress-e2e-code-coverage
 
 ## Project setup
 ```
@@ -15,14 +15,9 @@ yarn run serve
 yarn run build
 ```
 
-### Run your tests
+### Run your E2E tests
 ```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
+yarn run e2e
 ```
 
 ### Customize configuration
