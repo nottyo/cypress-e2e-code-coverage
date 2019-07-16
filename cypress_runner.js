@@ -27,7 +27,10 @@ ls(reportFiles, { recurse: true }, file => console.log(`removing ${file.full}`))
 
 // delete all existing report files
 rm(reportFiles, (error) => {
-    if (error) console.error(`Error while removing existing report files: ${error}`)
+    if (error) {
+        console.error(`Error while removing existing report files: ${error}`)
+        process.exit(1)
+    }
     console.log('Removing all existing report files successfully!')
 })
 
@@ -41,6 +44,7 @@ cypress.run({
     generateReport(reporterOptions)
 }).catch((error) => {
     console.error('errors: ', error)
+    process.exit(1)
 })
 
 function generateReport(options) {

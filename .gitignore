@@ -21,5 +21,6 @@ yarn-error.log*
 *.sw?
 
 cypress/screenshots
+cypress/report/mochawesome-report/*.json
 .nyc_output
 cast/
