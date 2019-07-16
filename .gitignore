@@ -24,3 +24,4 @@ cypress/screenshots
 cypress/report/mochawesome-report/*.json
 .nyc_output
 cast/
+coverage/*

@@ -17,15 +17,14 @@
 import './commands'
 import '@cypress/code-coverage/support'
 const addContext = require('mochawesome/addContext')
-
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 
+// return filePath to addContext to mochawesome reporter
+
 Cypress.on('test:after:run', (test, runnable) => {
     if (test.state === 'failed') {
-        const screenshotFilePath = `../../screenshots/${Cypress.spec.name}/${
-            runnable.parent.title
-        } -- ${test.title} (failed).png`
-        addContext({ test }, screenshotFilePath)
+        const screenshotFileName = `${runnable.parent.title} -- ${test.title} (failed).png`
+        addContext({ test }, `assets/${Cypress.spec.name}/${screenshotFileName}`)
     }
 })
