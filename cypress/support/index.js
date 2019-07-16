@@ -23,7 +23,7 @@ const addContext = require('mochawesome/addContext')
 
 Cypress.on('test:after:run', (test, runnable) => {
     if (test.state === 'failed') {
-        const screenshotFilePath = `${Cypress.config('screenshotsFolder')}/${Cypress.spec.name}/${
+        const screenshotFilePath = `../../screenshots/${Cypress.spec.name}/${
             runnable.parent.title
         } -- ${test.title} (failed).png`
         addContext({ test }, screenshotFilePath)
