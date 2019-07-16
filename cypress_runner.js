@@ -3,7 +3,6 @@ const yargs = require('yargs')
 const { merge } = require('mochawesome-merge')
 const marge = require('mochawesome-report-generator')
 const rm = require('rimraf')
-const path = require('path')
 const cypressConfig = require('./cypress')
 const ls = require('ls')
 const argv = yargs.options({
