@@ -19,3 +19,7 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw?
+
+cypress/screenshots
+.nyc_output
+cast/

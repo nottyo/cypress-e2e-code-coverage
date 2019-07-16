@@ -21,4 +21,10 @@ describe('Add Todo', () => {
         cy.get('[data-at="removeTodoBtn"]').click()
         cy.get('[data-at="noTodo"]').should('contain', 'No Anything Todo')
     })
+
+    it('should be always failed', () => {
+        const firstTodo = 'Writing a blog'
+        cy.get('[data-at="new-todo"]').type(`${firstTodo}{enter}`)
+        cy.get('[data-at="todoText"]').eq(0).should('contain', `${firstTodo}s`)
+    })
 })

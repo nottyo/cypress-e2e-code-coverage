@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+      "allowJs": true,
+      "target": "es2017",
+      "baseUrl": "./",
+      "allowSyntheticDefaultImports": false,
+      "types": [
+        "cypress"
+      ]
+    },
+    "include": [
+      "**/*.*"
+    ],
+    "exclude": ["node_modules", "dist"]
+}
